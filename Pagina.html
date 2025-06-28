@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collage para vos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Dancing Script';
+      color: white;
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    .fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+      grid-auto-rows: 15vw;
+      z-index: -1;
+      opacity: 0.75;
+    }
+
+    .fondo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .texto {
+      max-width: 1200px;
+      margin: 25px auto;
+      padding: 60px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    h1 {
+      font-size: 300%;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 125%;
+      text-align: justify;
+      line-height: 1.6;
+      font-weight: normal;
+      text-indent: 5px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 200%;
+      margin-top: 40px;
+    }
+
+    /* 🎵 Controles de música */
+    #controles-musica {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 15px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    #playPauseBtn {
+      background: none;
+      border: none;
+      font-size: 1em;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+
+    #volumen {
+      width: 100px;
+      cursor: pointer;
+    }
+
+    nav{
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        color: white;
+        font-size: 20px;
+    
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px black;
+        }
+    }
+
+  </style>
+</head>
+<body>
+    <nav>
+        <a href="/Ambar/Bienvenida/Bienvenida.html">Volver a la pagina anterior</a>
+    </nav>
+
+  <!-- 🎵 Audio -->
+  <audio id="musica" loop>
+    <source src="/Ambar/Pagina/Los Cafres - Casi que me pierdo.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <!-- 🎶 Controles -->
+  <div id="controles-musica">
+    <button id="playPauseBtn">▶️</button>
+    <input type="range" id="volumen" min="0" max="1" step="0.01" value="0.5">
+  </div>
+
+  <!-- 🎨 Fondo de imágenes -->
+  <div class="fondo">
+    <img src="/Ambar/Pagina/Collage Fondo/1.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/2.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/3.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/4.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/5.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/6.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/7.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/8.jpg" alt="">
+
+    <img src="/Ambar/Pagina/Collage Fondo/1.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/2.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/3.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/4.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/5.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/6.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/7.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/8.jpg" alt="">
+
+    <img src="/Ambar/Pagina/Collage Fondo/1.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/2.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/3.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/4.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/5.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/6.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/7.jpg" alt="">
+    <img src="/Ambar/Pagina/Collage Fondo/8.jpg" alt="">
+  </div>
+
+  <!-- Texto principal -->
+  <div class="texto">
+    <h1>Para vos 💖</h1>
+   
+    <p>
+        Ámbar, la verdad es que cada vez que paso un momento con vos, siento que no hay nada igual. No importa si estamos haciendo algo simple, como caminar, charlar boludeces o simplemente quedarnos en silencio, esos segundos son únicos, como si se frenara el tiempo y todo lo demás dejara de importar. Es raro, pero cuando estoy con vos todo se siente distinto, más real, más importante. No es solo porque sos vos, sino porque esos momentos me hacen sentir vivo, como que todo tiene sentido.
+    </p>
+
+
+    <p>
+        Sé que capaz pensás que ya soy lo mejor que tenés o que alguien podría darte, y está bueno que lo pienses, porque eso me hace sentir que te importo, que valgo algo para vos. Pero siendo sincero, yo sé que puedo dar mucho más. No me conformo con lo que soy hoy, ni con lo que hice hasta ahora. Quiero crecer, quiero mejorar, quiero ser alguien que te haga sentir orgullosa y feliz, alguien que esté a la altura de todo lo que merecés.
+    </p>
+
+
+    <p>
+        No es fácil decirlo, pero quiero que sepas que no es solo un querer común. Te amo Ámbar. Y cuando digo te amo, no es solo una palabra que sale así nomás, es todo lo que siento cada vez que pienso en vos o cuando estás cerca. Amo cómo sos, con todas tus cosas buenas, con esos detalles que tal vez ni notás, y hasta con esas cosas que a veces te hacen dudar de vos misma. Amo la persona que sos y la que sos conmigo, esa versión que se anima, que confía, que sonríe cuando está conmigo.
+    </p>
+   
+    <p>
+        Cada momento que paso con vos me confirma que sos alguien especial, alguien que no quiero perder, alguien que quiero cuidar y acompañar. No sé qué vaya a pasar en el futuro, ni cómo va a seguir todo, pero lo que sí sé es que este amor que siento por vos es real y profundo, y que quiero que lo sientas cada día, en cada gesto, en cada palabra, en cada silencio.
+    </p>
+
+
+    <p>
+        Así que gracias por cada momento único que me das. Gracias por ser vos, por hacer que mi mundo sea mejor solo con estar en él. Y aunque sé que puedo crecer y ser más, te prometo que voy a poner todo de mí para que este amor crezca con vos, para que juntos podamos construir algo que valga la pena.
+    </p>
+
+
+    <h2>
+        ❤️ Te Amodoro Mucho 🫶
+    </h2>
+
+  </div>
+
+  <!-- 🔁 Script -->
+  <script>
+    const musica = document.getElementById("musica");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const volumen = document.getElementById("volumen");
+
+    playPauseBtn.addEventListener("click", () => {
+      if (musica.paused) {
+        musica.play();
+        playPauseBtn.textContent = "⏸️";
+      } else {
+        musica.pause();
+        playPauseBtn.textContent = "▶️";
+      }
+    });
+
+    volumen.addEventListener("input", () => {
+      musica.volume = volumen.value;
+    });
+  </script>
+
+</body>
+</html>
